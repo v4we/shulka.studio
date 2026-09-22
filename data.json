@@ -22,6 +22,17 @@
       "portfolioLabel": "Portfolio coming soon",
       "skills": ["Python", "Java", "Skript", "Text design", "Web coding (AI-assisted)", "English", "German"],
       "projects": ["Fynx", "Nerix"]
+    },
+    {
+      "name": "",
+      "handle": "Mercur_Games",
+      "age": "Student",
+      "role": "Developer",
+      "avatar": "",
+      "portfolio": "",
+      "portfolioLabel": "Portfolio coming soon",
+      "skills": [],
+      "projects": []
     }
   ],
 
