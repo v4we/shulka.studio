@@ -15,7 +15,7 @@
     {
       "name": "Manuel",
       "handle": "v4we",
-      "age": "Student",
+      "age": "14-17",
       "role": "Founder, Developer, Designer",
       "avatar": "",
       "portfolio": "",
@@ -24,14 +24,14 @@
       "projects": ["Fynx", "Nerix"]
     },
     {
-      "name": "",
-      "handle": "Mercur_Games",
-      "age": "Student",
+      "name": "Mercur_Games",
+      "handle": "",
+      "age": "14-17",
       "role": "Developer",
       "avatar": "",
       "portfolio": "",
       "portfolioLabel": "Portfolio coming soon",
-      "skills": [],
+      "skills": ["Java", "Paper Api", "Python", "Lua", "Javascript", "Discord Bots", "Minecraft plugins", "English", "German", "French", "Russian"],
       "projects": []
     }
   ],
