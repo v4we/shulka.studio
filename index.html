@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Shulka Studio</title>
+<meta name="description" content="Shulka is a development and design studio building websites, web apps, Discord bots and Minecraft servers — design and development, end to end.">
+<link rel="icon" href="./favicon.png?v=2" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shulka.studio/">
+<meta property="og:title" content="shulka.studio — web apps, Discord bots & Minecraft servers">
+<meta property="og:description" content="A development and design studio building websites, web apps, Discord bots and Minecraft servers.">
+<meta property="og:image" content="https://shulka.studio/favicon.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0F0D14">
+<style>
+body{margin:0;background:#0F0D14;color:#F4F1F8;font-family:'Instrument Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+::selection{background:#3A2A5E;color:#F4F1F8}
+:focus-visible{outline:2px solid #CDB4FF;outline-offset:3px;border-radius:4px}
+.sk-label{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#6B6579}
+.sk-svc{margin:0;padding:0;list-style:none}
+.sk-svc li{padding:13px 0;border-bottom:1px solid #221E2C;font-size:15.5px;font-weight:500}
+.sk-svc li:first-child{border-top:1px solid #221E2C}
+.sk-link{font-size:15px;font-weight:500;color:#A7A1B4;border-bottom:1px solid #221E2C;padding-bottom:2px;transition:color .18s ease,border-color .18s ease}
+.sk-link:hover{color:#F4F1F8;border-color:#6B6579}
+.sk-btn{display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 22px;border-radius:10px;background:#CDB4FF;color:#17102A;font-weight:600;font-size:15px;transition:opacity .18s ease,transform .18s ease}
+.sk-btn:hover{opacity:.88;color:#17102A}
+.sk-btn:active{transform:scale(.985)}
+.sk-proj{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:56px 0;border-top:1px solid #221E2C}
+.sk-proj:first-child{border-top:0;padding-top:0}
+.sk-proj:nth-child(even) .sk-pic{order:2}
+@media(max-width:860px){
+  .sk-grid,.sk-proj,.sk-join{grid-template-columns:1fr!important;gap:44px!important}
+  .sk-proj:nth-child(even) .sk-pic{order:0}
+  .sk-member{grid-template-columns:64px 1fr!important;gap:20px!important}
+  .sk-member .sk-side{grid-column:1/-1;text-align:left!important;margin-top:4px}
+  .sk-pfp{width:64px!important;height:64px!important}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</helmet>
+<div style="background:#0F0D14">
+
+  <header style="position:sticky;top:0;z-index:30;background:rgba(15,13,20,0.88);backdrop-filter:blur(12px);border-bottom:1px solid #221E2C">
+    <div style="max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(20px,4vw,32px);height:70px">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;color:#F4F1F8">
+        <img src="./logo.svg" alt="" width="23" height="23" style="display:block;width:23px;height:23px">
+        <span style="font-weight:600;font-size:15.5px;letter-spacing:-0.015em">shulka.studio</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:clamp(16px,2.4vw,28px);font-size:15px;color:#A7A1B4">
+        <a href="#team" style="color:inherit">Team</a>
+        <a href="#projects" style="color:inherit">Projects</a>
+        <a href="#contact" style="color:#CDB4FF">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="max-width:1060px;margin:0 auto;padding:clamp(68px,8vw,104px) clamp(20px,4vw,32px) clamp(60px,7vw,96px)">
+    <div class="sk-grid" style="display:grid;grid-template-columns:1.25fr 0.85fr;gap:clamp(44px,6vw,80px);align-items:start">
+      <div style="min-width:0">
+        <img src="./logo.svg" alt="shulka.studio" width="120" height="120" style="display:block;width:clamp(84px,10vw,124px);height:auto;margin-bottom:28px">
+        <div class="sk-label">Development &amp; design studio</div>
+        <h1 style="margin:20px 0 0;max-width:17ch;font-weight:600;font-size:clamp(40px,5.6vw,62px);line-height:1.04;letter-spacing:-0.04em;text-wrap:balance">{{ headline }}</h1>
+        <p style="margin:24px 0 0;max-width:44ch;font-size:17px;line-height:1.6;color:#A7A1B4;text-wrap:pretty">{{ tagline }}</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-top:36px">
+          <a href="#contact" class="sk-btn">Join our Discord</a>
+          <a href="#projects" class="sk-link">See our work</a>
+        </div>
+      </div>
+
+      <div style="min-width:0">
+        <div class="sk-label" style="margin-bottom:16px">What we do</div>
+        <ul class="sk-svc">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="5">
+            <li>{{ s.title }}</li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:56px;margin-top:clamp(52px,7vw,72px);padding-top:30px;border-top:1px solid #221E2C">
+      <div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.03em;line-height:1">{{ teamCount }}</div>
+        <div style="margin-top:6px;font-size:13px;color:#6B6579">{{ teamLabel }}</div>
+      </div>
+      <div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.03em;line-height:1">{{ foundedYear }}</div>
+        <div style="margin-top:6px;font-size:13px;color:#6B6579">since</div>
+      </div>
+      <div>
+        <div style="font-size:28px;font-weight:600;letter-spacing:-0.03em;line-height:1">{{ projectCount }}</div>
+        <div style="margin-top:6px;font-size:13px;color:#6B6579">{{ projectLabel }}</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" style="max-width:1060px;margin:0 auto;padding:clamp(68px,8vw,96px) clamp(20px,4vw,32px);border-top:1px solid #221E2C">
+    <div style="margin-bottom:clamp(36px,5vw,52px);max-width:50ch">
+      <div class="sk-label">Team</div>
+      <h2 style="margin:14px 0 0;font-weight:600;font-size:clamp(26px,3.2vw,34px);letter-spacing:-0.035em">Who you'll be working with</h2>
+      <p style="margin:14px 0 0;font-size:15.5px;line-height:1.6;color:#A7A1B4">Everyone here designs, writes code, or ships. You can message any of us directly.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:44px">
+      <sc-for list="{{ team }}" as="m" hint-placeholder-count="1">
+        <article class="sk-member" style="display:grid;grid-template-columns:88px 1fr auto;gap:28px;align-items:start">
+          <div class="sk-pfp" style="width:88px;height:88px;border-radius:14px;background:#1A1622;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:10px;font-weight:600;letter-spacing:0.12em;color:#6B6579">
+            <sc-if value="{{ m.hasAvatar }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ m.avatar }}" alt="{{ m.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+            </sc-if>
+            <sc-if value="{{ m.noAvatar }}" hint-placeholder-val="{{ true }}">
+              <span>PFP</span>
+            </sc-if>
+          </div>
+
+          <div style="min-width:0">
+            <div style="font-weight:600;font-size:22px;letter-spacing:-0.025em;line-height:1.25">{{ m.name }}</div>
+            <div style="margin-top:3px;font-size:14.5px;color:#6B6579">{{ m.handle }} · {{ m.age }}</div>
+            <div style="margin-top:14px;font-size:14.5px;color:#CDB4FF">{{ m.role }}</div>
+            <div style="margin-top:18px;font-size:14.5px;line-height:1.75;color:#A7A1B4;max-width:52ch">{{ m.skillList }}</div>
+          </div>
+
+          <div class="sk-side" style="text-align:right;font-size:14.5px;color:#A7A1B4">
+            <sc-if value="{{ m.hasPortfolio }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ m.portfolio }}" target="_blank" rel="noopener" class="sk-link">{{ m.portfolioLabel }} →</a>
+            </sc-if>
+            <sc-if value="{{ m.noPortfolio }}" hint-placeholder-val="{{ true }}">
+              <span style="font-size:14px;color:#6B6579">{{ m.portfolioLabel }}</span>
+            </sc-if>
+            <div style="margin-top:20px">
+              <div class="sk-label" style="margin-bottom:6px">Projects</div>
+              {{ m.projectList }}
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="projects" style="max-width:1060px;margin:0 auto;padding:clamp(68px,8vw,96px) clamp(20px,4vw,32px);border-top:1px solid #221E2C">
+    <div style="margin-bottom:clamp(36px,5vw,52px)">
+      <div class="sk-label">Projects</div>
+      <h2 style="margin:14px 0 0;font-weight:600;font-size:clamp(26px,3.2vw,34px);letter-spacing:-0.035em">What we're bringing over</h2>
+    </div>
+
+    <div>
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="2">
+        <article class="sk-proj">
+          <div class="sk-pic" style="aspect-ratio:16/10;border-radius:12px;background:#171320;display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <sc-if value="{{ p.hasImage }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ p.image }}" alt="{{ p.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+            </sc-if>
+            <sc-if value="{{ p.noImage }}" hint-placeholder-val="{{ true }}">
+              <span style="font-size:10.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6B6579">Screenshot</span>
+            </sc-if>
+          </div>
+
+          <div style="min-width:0">
+            <div style="font-size:14px;font-weight:500;color:#6B6579">{{ p.tag }} · {{ p.year }}</div>
+            <h3 style="margin:10px 0 0;font-weight:600;font-size:30px;letter-spacing:-0.035em">{{ p.name }}</h3>
+            <p style="margin:14px 0 0;font-size:15.5px;line-height:1.6;color:#A7A1B4;max-width:42ch">{{ p.description }}</p>
+            <div style="margin-top:28px">
+              <sc-if value="{{ p.isLink }}" hint-placeholder-val="{{ true }}">
+                <a href="{{ p.href }}" target="_blank" rel="noopener" class="sk-link">{{ p.target }} →</a>
+              </sc-if>
+              <sc-if value="{{ p.isServer }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                  <span style="font-size:15px;color:#F4F1F8;overflow-wrap:anywhere">{{ p.target }}</span>
+                  <button type="button" onClick="{{ p.onCopy }}" aria-label="Copy server IP" style="border:1px solid #221E2C;background:transparent;color:{{ p.copyInk }};font-family:'Instrument Sans',sans-serif;font-size:13.5px;font-weight:500;padding:7px 13px;border-radius:8px;cursor:pointer;transition:border-color .18s ease,color .18s ease">
+                    {{ p.copyLabel }}
+                  </button>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width:1060px;margin:0 auto;padding:clamp(68px,8vw,96px) clamp(20px,4vw,32px) clamp(40px,5vw,56px);border-top:1px solid #221E2C">
+    <div class="sk-join" style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center">
+      <div style="min-width:0">
+        <div class="sk-label">Discord</div>
+        <h2 style="margin:14px 0 0;font-weight:600;font-size:clamp(26px,3.2vw,34px);letter-spacing:-0.035em">Join our Discord.</h2>
+        <p style="margin:14px 0 0;max-width:46ch;font-size:15.5px;line-height:1.6;color:#A7A1B4">Announcements and our smaller projects live here. The bigger ones have their own servers.</p>
+      </div>
+      <a href="https://discord.shulka.studio" target="_blank" rel="noopener" class="sk-btn">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.27 5.33A16.4 16.4 0 0 0 15.1 4l-.2.37a12.3 12.3 0 0 1 3.7 1.9 14.7 14.7 0 0 0-12.6-.4c.36-.2.75-.4 1.15-.55A12.4 12.4 0 0 1 9.1 4.4L8.9 4a16.4 16.4 0 0 0-4.17 1.33C2.1 9.27 1.4 13.1 1.74 16.88a16.6 16.6 0 0 0 5.05 2.56l.6-.83a10.8 10.8 0 0 1-1.7-.82l.42-.32a11.8 11.8 0 0 0 10.1 0l.42.32c-.54.32-1.1.6-1.7.82l.6.83a16.6 16.6 0 0 0 5.05-2.56c.4-4.38-.7-8.18-3.3-11.55ZM8.5 14.7c-1 0-1.82-.92-1.82-2.05 0-1.13.8-2.05 1.82-2.05s1.84.92 1.82 2.05c0 1.13-.8 2.05-1.82 2.05Zm7 0c-1 0-1.82-.92-1.82-2.05 0-1.13.8-2.05 1.82-2.05s1.83.92 1.82 2.05c0 1.13-.8 2.05-1.82 2.05Z"></path></svg>
+        Join the server
+      </a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin-top:clamp(52px,7vw,72px);padding-top:30px;border-top:1px solid #221E2C;font-size:14px;color:#6B6579">
+      <span>© 2026 Shulka Studio</span>
+      <div style="display:flex;flex-wrap:wrap;gap:26px">
+        <a href="#team" style="color:#A7A1B4">Team</a>
+        <a href="#projects" style="color:#A7A1B4">Projects</a>
+        <a href="/imprint" style="color:#A7A1B4">Imprint</a>
+        <a href="mailto:contact@shulka.studio" style="color:#A7A1B4">contact@shulka.studio</a>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { copied: null, data: null };
+
+  componentDidMount() {
+    fetch("./data.json")
+      .then(r => r.json())
+      .then(data => this.setState({ data }))
+      .catch(() => {});
+  }
+
+  copy(ip, id) {
+    if (navigator.clipboard) navigator.clipboard.writeText(ip).catch(() => {});
+    this.setState({ copied: id });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ copied: null }), 2200);
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  renderVals() {
+    const data = this.state.data || {};
+    const services = data.services || [];
+    const team = data.team || [];
+    const raw = data.projects || [];
+
+    const projects = raw.map((p, i) => {
+      const isLink = !!p.link;
+      const copied = this.state.copied === i;
+      return {
+        ...p, isLink, isServer: !isLink,
+        hasImage: !!p.image, noImage: !p.image,
+        target: isLink ? p.link.replace(/^https?:\/\//, "") : p.ip,
+        href: p.link || "#",
+        crewList: (p.crew || []).join(", "),
+        copyLabel: copied ? "Copied" : "Copy",
+        copyInk: copied ? "#CDB4FF" : "#A7A1B4",
+        onCopy: () => this.copy(p.ip, i)
+      };
+    });
+
+    return {
+      services,
+      teamCount: team.length,
+      teamLabel: team.length === 1 ? "person" : "people",
+      projectCount: raw.length,
+      projectLabel: raw.length === 1 ? "project" : "projects",
+      foundedYear: data.founded || "2026",
+      tagline: data.tagline || "",
+      headline: data.headline || "",
+      team: team.map((m, i) => ({
+        ...m,
+        hasAvatar: !!m.avatar, noAvatar: !m.avatar,
+        hasPortfolio: !!m.portfolio, noPortfolio: !m.portfolio,
+        portfolioLabel: m.portfolioLabel || (m.portfolio ? "Portfolio" : "Portfolio coming soon"),
+        skillList: (m.skills || []).join(" · "),
+        projectList: (m.projects || []).join(", ")
+      })),
+      projects
+    };
+  }
+}
+</script>
+</body>
+</html>
